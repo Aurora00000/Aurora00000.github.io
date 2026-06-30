@@ -9,6 +9,85 @@ redirect_from:
 
 <span class="anchor" id="about-me"></span>
 
+<style>
+.paper-box {
+  display: flex !important;
+  align-items: center;
+  flex-direction: row;
+  border-bottom: 1px solid #efefef;
+  padding: 1.8em 0;
+  gap: 1.75em;
+}
+
+.paper-box-image {
+  flex: 0 0 40%;
+  max-width: 400px;
+  order: 1;
+}
+
+.paper-figure {
+  position: relative;
+  margin: 0;
+}
+
+.paper-figure img {
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.24);
+  border: 1px solid #e6e9ee;
+  background: #fff;
+}
+
+.paper-badge {
+  position: absolute;
+  top: 0.45em;
+  left: -0.55em;
+  padding: 0.28em 0.85em;
+  background: #00369f;
+  color: #fff;
+  font-size: 0.76em;
+  font-weight: 700;
+  line-height: 1.2;
+  border-radius: 1px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.22);
+  z-index: 2;
+}
+
+.paper-box-text {
+  flex: 1 1 60%;
+  min-width: 0;
+  order: 2;
+}
+
+.paper-box-title {
+  margin: 0 0 0.45em;
+  font-weight: 700;
+  line-height: 1.32;
+}
+
+.paper-box-authors,
+.paper-box-summary {
+  margin: 0.35em 0;
+}
+
+.paper-box-links {
+  margin: 0.65em 0 0;
+}
+
+@media (max-width: 48em) {
+  .paper-box {
+    display: block !important;
+    padding: 1.4em 0;
+  }
+
+  .paper-box-image {
+    max-width: 100%;
+    margin-bottom: 1em;
+  }
+}
+</style>
+
 # 🤔 About Me
 
 I am Jing Qu, affiliated with Shandong University. My research focuses on human-computer interaction for healthcare, including virtual and augmented reality rehabilitation, multimodal neuroergonomics, fNIRS/EEG-based assessment, and data-driven design of intelligent rehabilitation systems.
