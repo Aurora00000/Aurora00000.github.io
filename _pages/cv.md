@@ -20,6 +20,16 @@ redirect_from:
 - Multimodal neuroergonomics using fNIRS, EEG, eye tracking, and behavioral data
 - Data-driven design and assessment of intelligent rehabilitation systems
 
+# Service
+
+- Reviewer for *Complementary Therapies in Medicine*, 2026.
+- Reviewer for *Geriatric Nursing*, 2026.
+- Reviewer for *International Journal of Human-Computer Studies*, 2026.
+
+# Honors and Awards
+
+- To be updated.
+
 # Publications
 
 <ul>

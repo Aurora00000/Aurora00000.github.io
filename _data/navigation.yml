@@ -1,20 +1,17 @@
 # Header navigation.
 
 main:
-  - title: "About"
-    url: /#about-me
-
-  - title: "News"
-    url: /#news
+  - title: "Home"
+    url: /
 
   - title: "Publications"
     url: /publications/
 
+  - title: "Service"
+    url: /service/
+
   - title: "Honors"
-    url: /#honors-and-awards
+    url: /honors/
 
-  - title: "Education"
-    url: /#education
-
-  - title: "Links"
-    url: /#links
+  - title: "CV"
+    url: /cv/

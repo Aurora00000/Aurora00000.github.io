@@ -28,10 +28,8 @@ _pages/about.md
 
 - About Me
 - News
-- Selected Publications
-- Honors and Awards
-- Education
-- Links
+- Research Interests
+- Contact
 
 改文字时，直接改对应段落即可。
 
@@ -114,7 +112,7 @@ _pages/about.md
 编辑：
 
 ```text
-_pages/about.md
+_pages/honors.md
 ```
 
 找到：
@@ -133,12 +131,34 @@ _pages/about.md
 
 注意：奖项最好写真实、可核对的信息，不确定的先不要写。
 
-## 四、更新首页精选论文卡片
+## 四、更新 Service and Leadership
 
 编辑：
 
 ```text
-_pages/about.md
+_pages/service.md
+```
+
+这里可以写：
+
+- 期刊审稿服务
+- 会议审稿服务
+- 学术组织服务
+- 实验室/学生组织管理职责
+- 竞赛组织或志愿服务
+
+期刊审稿可以写成：
+
+```markdown
+- *International Journal of Human-Computer Studies* (Elsevier), reviewer, 2026.
+```
+
+## 五、更新精选论文卡片
+
+编辑：
+
+```text
+_pages/publications.html
 ```
 
 每篇论文卡片大概长这样：
@@ -180,7 +200,7 @@ images/
 paper-new-work.jpg
 ```
 
-## 五、更新完整论文列表
+## 六、更新完整论文列表
 
 所有论文条目在：
 
@@ -223,7 +243,7 @@ date: 2026-01-01
 
 如果只知道年份，就把月份和日期写成 `01-01`。
 
-## 六、每次修改后如何更新网站
+## 七、每次修改后如何更新网站
 
 打开 PowerShell，运行：
 
@@ -250,7 +270,7 @@ Ctrl + F5
 
 强制刷新浏览器缓存。
 
-## 七、如何确认是否发布成功
+## 八、如何确认是否发布成功
 
 进入 GitHub 仓库：
 
@@ -269,7 +289,7 @@ https://github.com/Aurora00000/Aurora00000.github.io
 - Markdown 文件头部的 `---` 缺失
 - YAML 字段里的冒号 `:` 没有用引号包起来
 
-## 八、常见问题
+## 九、常见问题
 
 ### 1. GitHub Pages 等很久还是没更新
 
@@ -309,10 +329,9 @@ images/xxx.jpg
 
 论文卡片里每个 `<div>` 都要配套关闭。
 
-## 九、建议维护习惯
+## 十、建议维护习惯
 
 - 每次只改一小部分，确认没问题再继续改。
 - 图片文件名尽量用英文、数字、短横线。
 - 论文和奖项不要写不确定的信息。
 - 重要改动前可以先备份对应文件。
-
