@@ -1,0 +1,8 @@
+# Optional per-page authors.
+
+Jing Qu:
+  name        : "Jing Qu"
+  uri         : "https://dblp.org/pid/35/588-1.html"
+  email       :
+  bio         : "Human-computer interaction, VR/AR rehabilitation, multimodal neuroergonomics, and biomedical data analysis"
+  avatar      : "profile.png"
