@@ -78,21 +78,20 @@ redirect_from:
     <p class="section-kicker"><i class="fas fa-bullhorn" aria-hidden="true"></i><span class="i18n-en-inline">Updates</span><span class="i18n-zh-inline">最新动态</span></p>
     <h2><span class="i18n-en-inline">News</span><span class="i18n-zh-inline">动态</span></h2>
     <p class="news-record-count">
-      <span class="i18n-en-inline"><strong>{{ site.publications | size }}</strong> publications, generated from the public publication record.</span>
-      <span class="i18n-zh-inline">已收录 <strong>{{ site.publications | size }}</strong> 篇论文，由公开论文记录自动生成。</span>
+      <span class="i18n-en-inline"><strong>{{ site.data.publications | size }}</strong> publications, generated from the public publication record.</span>
+      <span class="i18n-zh-inline">已收录 <strong>{{ site.data.publications | size }}</strong> 篇论文，由公开论文记录自动生成。</span>
     </p>
   </div>
 
   {% assign publication_years = "2026,2025,2024,2023,2022" | split: "," %}
-  {% assign sorted_publications = site.publications | sort: "date" | reverse %}
+  {% assign sorted_publications = site.data.publications %}
   <div class="news-year-list">
     {% for year in publication_years %}
       <div class="news-year-group">
         <div class="news-year-heading"><time datetime="{{ year }}">{{ year }}</time></div>
         <div class="news-year-entries">
           {% for post in sorted_publications %}
-            {% assign post_year = post.date | date: "%Y" %}
-            {% if post_year == year %}
+            {% if post.year == year %}
               <article class="news-publication">
                 <a class="news-publication-title" href="{{ post.paperurl }}" target="_blank" rel="noopener">{{ post.title }}</a>
                 <span class="news-publication-venue">{{ post.venue }}</span>
@@ -165,8 +164,7 @@ redirect_from:
         <h4 class="publication-year">{{ year }}</h4>
         <div class="publication-year-entries">
           {% for post in sorted_publications %}
-            {% assign post_year = post.date | date: "%Y" %}
-            {% if post_year == year %}
+            {% if post.year == year %}
               {% unless post.selected %}
                 <article class="compact-publication">
                   <a class="compact-publication-title" href="{{ post.paperurl }}" target="_blank" rel="noopener">{{ post.title }}</a>

@@ -113,7 +113,7 @@ _data/navigation.yml
 
 ## 二、更新 News
 
-首页 News 会从 `_publications` 文件夹自动读取全部论文，并按年份生成动态时间线。新增或修改论文记录后，News 会一起更新，不需要再手工编辑 `_pages/about.md`。
+首页 News 会从 `_data/publications.yml` 自动读取全部论文，并按年份生成动态时间线。新增或修改论文记录后，News 会一起更新，不需要再手工编辑 `_pages/about.md`。
 
 如果以后要加入论文以外的消息，例如获奖、报告或入职信息，可以在 `_pages/about.md` 的 `id="news"` 栏目中另加一条手写消息。只写已经确认的信息。
 
@@ -194,7 +194,7 @@ _pages/publications.html
 </article>
 ```
 
-精选论文卡片仍需要在 `_pages/about.md` 和 `_pages/publications.html` 中各维护一次；卡片下方的“更多论文”和完整论文清单会从 `_publications` 自动生成。
+精选论文卡片仍需要在 `_pages/about.md` 和 `_pages/publications.html` 中各维护一次；卡片下方的“更多论文”和完整论文清单会从 `_data/publications.yml` 自动生成。
 
 如果要换论文图：
 
@@ -218,15 +218,32 @@ paper-new-work.jpg
 
 ## 六、更新完整论文列表
 
-所有论文条目在：
+主页 News、主页“更多论文”和独立 Publications 页共用的数据表在：
+
+```text
+_data/publications.yml
+```
+
+每篇论文是一组 YAML 数据。新增论文时，复制其中一组并修改：
+
+```yaml
+- year: '2026'
+  title: '论文标题'
+  venue: '期刊或会议名称'
+  paperurl: 'https://doi.org/...'
+  authors_html: 'Author A, <strong>Jing Qu</strong>, Author C'
+  selected: false
+```
+
+把新论文放在对应年份的位置，年份新的排在前面。保存后，三个论文区域都会自动更新。
+
+详细论文元数据还保存在：
 
 ```text
 _publications
 ```
 
-每篇论文一个 `.md` 文件。
-
-如果要新增论文，可以复制一个旧文件，然后改：
+每篇论文一个 `.md` 文件，作为档案保留。如果需要新增对应的详细记录，可以复制一个旧文件，然后改：
 
 ```yaml
 title:
@@ -240,7 +257,7 @@ citation:
 authors_html:
 ```
 
-`authors_html` 用于完整论文列表。请把自己的姓名加粗，例如：
+在 `_data/publications.yml` 和详细记录的 `authors_html` 中，请把自己的姓名加粗，例如：
 
 ```yaml
 authors_html: 'Author A, <strong>Jing Qu</strong>, Author C'
@@ -254,7 +271,7 @@ authors_html: 'Author A<sup>*</sup>, <strong>Jing Qu<sup>*</sup></strong>, Autho
 
 页面会自动显示说明：`* Equal contribution / 共同第一作者`。只有得到论文或出版社页面确认后才添加这个符号。
 
-如果希望一篇论文出现在首页三张精选论文卡片中，还可以加入：
+如果希望一篇论文出现在首页三张精选论文卡片中，可以在 `_data/publications.yml` 中设为：
 
 ```yaml
 selected: true

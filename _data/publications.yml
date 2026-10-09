@@ -1,0 +1,139 @@
+- year: '2026'
+  title: 'PanoVR: A Longitudinal Human-Computer Interaction Study on Promoting Skill Transfer in Children with Autism Spectrum Disorder through Panoramic Multi-sensory Virtual Reality Training'
+  venue: 'Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems'
+  paperurl: 'https://doi.org/10.1145/3772318.3790764'
+  authors_html: 'Chenyang Wang, Yang Zhao, Peihan Shi, <strong>Jing Qu</strong>, Changqing Fu, Xutong Guo, Lingguo Bu'
+  selected: false
+
+- year: '2026'
+  title: 'CalliRehab: Supporting Motor-Cognitive Recovery in Post-Stroke Rehabilitation Through AR-Enhanced Multisensory Calligraphy Therapy'
+  venue: 'International Journal of Human–Computer Interaction'
+  paperurl: 'https://doi.org/10.1080/10447318.2025.2580543'
+  authors_html: 'Ziyi Wang, <strong>Jing Qu</strong>, Linxin Du, Zhiyuan Tang, Lingguo Bu, Xipei Ren'
+  selected: false
+
+- year: '2026'
+  title: 'ASAC-Net: A novel multimodal alignment-complementary fusion framework for EEG-fNIRS emotion recognition'
+  venue: 'Information Fusion'
+  paperurl: 'https://doi.org/10.1016/j.inffus.2026.104329'
+  authors_html: 'Kaining Fang<sup>*</sup>, <strong>Jing Qu<sup>*</sup></strong>, Zixing Ding, Junhang Ding, Lingguo Bu'
+  selected: true
+
+- year: '2026'
+  title: 'A personalized rehabilitation design method via knowledge graph-based multi-source data integration'
+  venue: 'Advanced Engineering Informatics'
+  paperurl: 'https://doi.org/10.1016/j.aei.2025.104005'
+  authors_html: 'Bofan Wang<sup>*</sup>, <strong>Jing Qu<sup>*</sup></strong>, Xinxin Li, Chenyang Wang, Lingguo Bu'
+  selected: false
+
+- year: '2025'
+  title: 'Short-Term Longitudinal Study on Brain Network Informatics of Stroke Patients Under Acupuncture and Motor Imagery Intervention'
+  venue: 'IEEE Journal of Biomedical and Health Informatics'
+  paperurl: 'https://doi.org/10.1109/JBHI.2025.3527074'
+  authors_html: '<strong>Jing Qu</strong>, Yijun Du, Jing Jing, Jie Wang, Lingguo Bu, Yonghui Wang'
+  selected: false
+
+- year: '2025'
+  title: 'P-MARS: Design of a VR-Based Ergotherapy System for Children with Autism and its Longitudinal Tracking Evaluation'
+  venue: '2025 IEEE International Symposium on Mixed and Augmented Reality (ISMAR)'
+  paperurl: 'https://doi.org/10.1109/ismar67309.2025.00157'
+  authors_html: 'Yang Zhao, Chenyang Wang, Peihan Shi, <strong>Jing Qu</strong>, Changqing Fu, Xuchen Guo, Lingguo Bu'
+  selected: false
+
+- year: '2025'
+  title: 'Investigating Virtual Reality for Alleviating Human-Computer Interaction Fatigue: A Multimodal Assessment and Comparison with Flat Video'
+  venue: 'IEEE Transactions on Visualization and Computer Graphics'
+  paperurl: 'https://doi.org/10.1109/TVCG.2025.3549581'
+  authors_html: 'Xinyi Wang, <strong>Jing Qu</strong>, Lingguo Bu, Shantong Zhu'
+  selected: false
+
+- year: '2025'
+  title: 'Embodied Neuromorphic Intelligence in Healthcare: Evaluating Pose-Matching Interaction Using fNIRS and Behavioral Data'
+  venue: 'IEEE Internet of Things Journal'
+  paperurl: 'https://doi.org/10.1109/JIOT.2024.3512877'
+  authors_html: '<strong>Jing Qu</strong>, Wenxiu Wang, Xipei Ren, Yuzi Zhang, Lingguo Bu, Lei Liu'
+  selected: false
+
+- year: '2025'
+  title: 'Dynamic Brain Function Tracking During Cognitive Tasks in Extreme Environments Using fNIRS'
+  venue: 'International Journal of Human–Computer Interaction'
+  paperurl: 'https://doi.org/10.1080/10447318.2025.2470290'
+  authors_html: 'Lingguo Bu, Tan Zou, Yulin Zhang, <strong>Jing Qu</strong>, Zhengyi Lu, Yuqian Zhang, Si Li, Xin Wang'
+  selected: false
+
+- year: '2025'
+  title: 'Design and evaluation of AR-based adaptive human-computer interaction cognitive training'
+  venue: 'International Journal of Human-Computer Studies'
+  paperurl: 'https://doi.org/10.1016/j.ijhcs.2025.103504'
+  authors_html: 'Man Chu, <strong>Jing Qu</strong>, Tan Zou, Qinbiao Li, Lingguo Bu, Yiran Shen'
+  selected: true
+
+- year: '2025'
+  title: 'ArmVR: Innovative Design Combining Virtual Reality Technology and Mechanical Equipment in Stroke Rehabilitation Therapy'
+  venue: 'IEEE Transactions on Visualization and Computer Graphics'
+  paperurl: 'https://doi.org/10.1109/TVCG.2025.3549561'
+  authors_html: '<strong>Jing Qu</strong>, Lingguo Bu, Zhongxin Chen, Yalu Jin, Lei Zhao, Shantong Zhu, Fenghe Guo'
+  selected: false
+
+- year: '2025'
+  title: 'An adaptive design approach for AIGC-based VR rehabilitation training systems'
+  venue: 'Journal of Engineering Design'
+  paperurl: 'https://doi.org/10.1080/09544828.2025.2540239'
+  authors_html: 'Lingguo Bu, <strong>Jing Qu</strong>, Junhang Ding, Chenyang Wang, Xinxin Li, Peihan Shi'
+  selected: false
+
+- year: '2025'
+  title: 'A novel underactuated exoskeleton rehabilitation glove for hand flexion and extension training'
+  venue: 'Biomimetic Intelligence and Robotics'
+  paperurl: 'https://doi.org/10.1016/J.BIROB.2025.100248'
+  authors_html: 'Lei Zhao, Fenghe Guo, Fei Yang, Chao Li, Yufei Zhao, <strong>Jing Qu</strong>, Kun Li, Yan Liu, Lili Wang, Lingguo Bu'
+  selected: false
+
+- year: '2024'
+  title: 'Understanding the Impact of Longitudinal VR Training on Users with Mild Cognitive Impairment Using fNIRS and Behavioral Data'
+  venue: '2024 IEEE Conference Virtual Reality and 3D User Interfaces (VR)'
+  paperurl: 'https://doi.org/10.1109/vr58804.2024.00077'
+  authors_html: '<strong>Jing Qu</strong>, Shantong Zhu, Yiran Shen, Yanjie Zhang, Lingguo Bu'
+  selected: false
+
+- year: '2024'
+  title: 'Development of a novel machine learning-based approach for brain function assessment and integrated software solution'
+  venue: 'Advanced Engineering Informatics'
+  paperurl: 'https://doi.org/10.1016/j.aei.2024.102461'
+  authors_html: '<strong>Jing Qu</strong>, Lizhen Cui, Wei Guo, Lingguo Bu, Zhenya Wang'
+  selected: true
+
+- year: '2024'
+  title: 'A training and assessment system for human-computer interaction combining fNIRS and eye-tracking data'
+  venue: 'Advanced Engineering Informatics'
+  paperurl: 'https://doi.org/10.1016/J.AEI.2024.102765'
+  authors_html: '<strong>Jing Qu</strong>, Lingguo Bu, Lei Zhao, Yonghui Wang'
+  selected: false
+
+- year: '2023'
+  title: 'Functional near-infrared spectroscopy in the assessment of rehabilitation efficacy of virtual reality products for people with cognitive disorders'
+  venue: 'International Journal of Industrial Ergonomics'
+  paperurl: 'https://doi.org/10.1016/j.ergon.2023.103500'
+  authors_html: '<strong>Jing Qu</strong>, Yanjie Zhang, Lingguo Bu'
+  selected: false
+
+- year: '2023'
+  title: 'Developing a virtual reality healthcare product based on data-driven concepts: A case study'
+  venue: 'Advanced Engineering Informatics'
+  paperurl: 'https://doi.org/10.1016/j.aei.2023.102118'
+  authors_html: '<strong>Jing Qu<sup>*</sup></strong>, Yinuo Zhang<sup>*</sup>, Weizhong Tang, Wenming Cheng, Yu Zhang, Lingguo Bu'
+  selected: false
+
+- year: '2023'
+  title: 'A neuroergonomic approach to assessing motor performance in stroke patients using fNIRS and behavioral data'
+  venue: 'Applied Ergonomics'
+  paperurl: 'https://doi.org/10.1016/j.apergo.2023.103979'
+  authors_html: 'Lingguo Bu, <strong>Jing Qu</strong>, Lei Zhao, Yanjie Zhang, Yonghui Wang'
+  selected: false
+
+- year: '2022'
+  title: 'The Effects of a Virtual Reality Rehabilitation Task on Elderly Subjects: An Experimental Study Using Multimodal Data'
+  venue: 'IEEE Transactions on Neural Systems and Rehabilitation Engineering'
+  paperurl: 'https://doi.org/10.1109/TNSRE.2022.3183686'
+  authors_html: '<strong>Jing Qu</strong>, Lizhen Cui, Wei Guo, Xipei Ren, Lingguo Bu'
+  selected: false
