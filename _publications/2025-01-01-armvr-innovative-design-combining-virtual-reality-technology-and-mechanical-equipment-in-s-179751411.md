@@ -4,6 +4,7 @@ collection: publications
 category: manuscripts
 permalink: /publication/armvr-innovative-design-combining-virtual-reality-technology-and-mechanical-equipment-in-s
 excerpt: 'Jing Qu, Lingguo Bu, Zhongxin Chen, Yalu Jin, Lei Zhao, Shantong Zhu, Fenghe Guo. IEEE Transactions on Visualization and Computer Graphics, 2025.'
+authors_html: '<strong>Jing Qu</strong>, Lingguo Bu, Zhongxin Chen, Yalu Jin, Lei Zhao, Shantong Zhu, Fenghe Guo'
 date: 2025-01-01
 venue: 'IEEE Transactions on Visualization and Computer Graphics'
 paperurl: 'https://doi.org/10.1109/TVCG.2025.3549561'

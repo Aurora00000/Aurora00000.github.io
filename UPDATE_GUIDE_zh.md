@@ -113,23 +113,9 @@ _data/navigation.yml
 
 ## 二、更新 News
 
-编辑：
+首页 News 会从 `_publications` 文件夹自动读取全部论文，并按年份生成动态时间线。新增或修改论文记录后，News 会一起更新，不需要再手工编辑 `_pages/about.md`。
 
-```text
-_pages/about.md
-```
-
-找到 `<div class="news-list">`，在其中增加一条：
-
-```html
-<article class="news-item">
-  <time datetime="2026-06">2026.06</time>
-  <p class="i18n-en">English news text.</p>
-  <p class="i18n-zh">中文动态内容。</p>
-</article>
-```
-
-建议把最新消息放在最上面，并只写已经确认的信息。
+如果以后要加入论文以外的消息，例如获奖、报告或入职信息，可以在 `_pages/about.md` 的 `id="news"` 栏目中另加一条手写消息。只写已经确认的信息。
 
 ## 三、更新 Honors and Awards
 
@@ -208,7 +194,7 @@ _pages/publications.html
 </article>
 ```
 
-如果希望独立的 Publications 页面也同步显示这篇精选论文，再按该页面已有的 `paper-box` 格式增加一次。
+精选论文卡片仍需要在 `_pages/about.md` 和 `_pages/publications.html` 中各维护一次；卡片下方的“更多论文”和完整论文清单会从 `_publications` 自动生成。
 
 如果要换论文图：
 
@@ -251,7 +237,30 @@ date:
 venue:
 paperurl:
 citation:
+authors_html:
 ```
+
+`authors_html` 用于完整论文列表。请把自己的姓名加粗，例如：
+
+```yaml
+authors_html: 'Author A, <strong>Jing Qu</strong>, Author C'
+```
+
+如果出版社明确标注两位作者贡献相同，可以用 `*` 标识共同第一作者：
+
+```yaml
+authors_html: 'Author A<sup>*</sup>, <strong>Jing Qu<sup>*</sup></strong>, Author C'
+```
+
+页面会自动显示说明：`* Equal contribution / 共同第一作者`。只有得到论文或出版社页面确认后才添加这个符号。
+
+如果希望一篇论文出现在首页三张精选论文卡片中，还可以加入：
+
+```yaml
+selected: true
+```
+
+`selected: true` 会让该论文不再重复出现在首页“更多论文”列表中，但独立 Publications 页面仍会显示它。精选卡片的标题、图片和简介仍需按“第五节”的方法同步维护。
 
 常用分类：
 

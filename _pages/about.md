@@ -77,24 +77,31 @@ redirect_from:
   <div class="section-heading">
     <p class="section-kicker"><i class="fas fa-bullhorn" aria-hidden="true"></i><span class="i18n-en-inline">Updates</span><span class="i18n-zh-inline">最新动态</span></p>
     <h2><span class="i18n-en-inline">News</span><span class="i18n-zh-inline">动态</span></h2>
+    <p class="news-record-count">
+      <span class="i18n-en-inline"><strong>{{ site.publications | size }}</strong> publications, generated from the public publication record.</span>
+      <span class="i18n-zh-inline">已收录 <strong>{{ site.publications | size }}</strong> 篇论文，由公开论文记录自动生成。</span>
+    </p>
   </div>
 
-  <div class="news-list">
-    <article class="news-item">
-      <time datetime="2026">2026</time>
-      <p class="i18n-en">Recent public records include <strong>PanoVR</strong>, <strong>ASAC-Net</strong>, knowledge graph-based rehabilitation design, and AR-enhanced multisensory calligraphy therapy.</p>
-      <p class="i18n-zh">公开记录中的近期成果包括 <strong>PanoVR</strong>、<strong>ASAC-Net</strong>、基于知识图谱的康复设计，以及增强现实多感官书法疗法。</p>
-    </article>
-    <article class="news-item">
-      <time datetime="2025">2025</time>
-      <p class="i18n-en">Works on VR/AR interaction, rehabilitation, and multimodal assessment appeared in IEEE TVCG, IEEE JBHI, IEEE Internet of Things Journal, and IJHCS.</p>
-      <p class="i18n-zh">围绕 VR/AR 交互、康复与多模态评估的工作发表于 IEEE TVCG、IEEE JBHI、IEEE Internet of Things Journal 和 IJHCS。</p>
-    </article>
-    <article class="news-item">
-      <time datetime="2024">2024</time>
-      <p class="i18n-en">Published research on longitudinal VR training, fNIRS and eye-tracking assessment, and machine-learning-based brain function assessment.</p>
-      <p class="i18n-zh">发表了关于长期 VR 训练、fNIRS 与眼动评估，以及基于机器学习的脑功能评估研究。</p>
-    </article>
+  {% assign publication_years = "2026,2025,2024,2023,2022" | split: "," %}
+  {% assign sorted_publications = site.publications | sort: "date" | reverse %}
+  <div class="news-year-list">
+    {% for year in publication_years %}
+      <div class="news-year-group">
+        <div class="news-year-heading"><time datetime="{{ year }}">{{ year }}</time></div>
+        <div class="news-year-entries">
+          {% for post in sorted_publications %}
+            {% assign post_year = post.date | date: "%Y" %}
+            {% if post_year == year %}
+              <article class="news-publication">
+                <a class="news-publication-title" href="{{ post.paperurl }}" target="_blank" rel="noopener">{{ post.title }}</a>
+                <span class="news-publication-venue">{{ post.venue }}</span>
+              </article>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
   </div>
 </section>
 
@@ -107,6 +114,8 @@ redirect_from:
     <a class="section-link" href="/publications/"><span class="i18n-en-inline">View all publications</span><span class="i18n-zh-inline">查看全部论文</span><i class="fas fa-arrow-right" aria-hidden="true"></i></a>
   </div>
 
+  <p class="publication-legend"><sup>*</sup> <span class="i18n-en-inline">Equal contribution. Jing Qu is shown in bold.</span><span class="i18n-zh-inline">共同第一作者；Jing Qu 以粗体显示。</span></p>
+
   <article class="jing-paper">
     <div class="jing-paper-media">
       <span class="venue-badge">Information Fusion 2026</span>
@@ -114,7 +123,7 @@ redirect_from:
     </div>
     <div class="jing-paper-body">
       <h3>ASAC-Net: A novel multimodal alignment-complementary fusion framework for EEG-fNIRS emotion recognition</h3>
-      <p class="paper-authors">Kaining Fang, <strong>Jing Qu</strong>, Zixing Ding, Junhang Ding, Lingguo Bu</p>
+      <p class="paper-authors">Kaining Fang<sup>*</sup>, <strong>Jing Qu<sup>*</sup></strong>, Zixing Ding, Junhang Ding, Lingguo Bu</p>
       <p class="i18n-en">A multimodal fusion framework emphasizing alignment and complementary information across EEG and fNIRS signals.</p>
       <p class="i18n-zh">一种面向 EEG-fNIRS 情感识别的多模态融合框架，强调跨信号对齐与互补信息建模。</p>
       <div class="jing-paper-links"><a href="https://doi.org/10.1016/j.inffus.2026.104329" target="_blank" rel="noopener"><i class="fas fa-external-link-alt" aria-hidden="true"></i>DOI</a></div>
@@ -148,6 +157,29 @@ redirect_from:
       <div class="jing-paper-links"><a href="https://doi.org/10.1016/j.aei.2024.102461" target="_blank" rel="noopener"><i class="fas fa-external-link-alt" aria-hidden="true"></i>DOI</a></div>
     </div>
   </article>
+
+  <h3 class="publication-subheading"><span class="i18n-en-inline">More Publications</span><span class="i18n-zh-inline">更多论文</span></h3>
+  <div class="publication-list">
+    {% for year in publication_years %}
+      <div class="publication-year-group">
+        <h4 class="publication-year">{{ year }}</h4>
+        <div class="publication-year-entries">
+          {% for post in sorted_publications %}
+            {% assign post_year = post.date | date: "%Y" %}
+            {% if post_year == year %}
+              {% unless post.selected %}
+                <article class="compact-publication">
+                  <a class="compact-publication-title" href="{{ post.paperurl }}" target="_blank" rel="noopener">{{ post.title }}</a>
+                  <p class="compact-publication-authors">{{ post.authors_html }}</p>
+                  <p class="compact-publication-meta">{{ post.venue }} · {{ year }} <a class="compact-publication-link" href="{{ post.paperurl }}" target="_blank" rel="noopener" aria-label="Open DOI for {{ post.title }}"><i class="fas fa-external-link-alt" aria-hidden="true"></i> DOI</a></p>
+                </article>
+              {% endunless %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
 </section>
 
 <section class="jing-section split-section" id="education">

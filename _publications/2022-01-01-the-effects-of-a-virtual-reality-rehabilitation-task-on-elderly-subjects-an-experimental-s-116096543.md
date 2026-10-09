@@ -4,6 +4,7 @@ collection: publications
 category: manuscripts
 permalink: /publication/the-effects-of-a-virtual-reality-rehabilitation-task-on-elderly-subjects-an-experimental-s
 excerpt: 'Jing Qu, Lizhen Cui, Wei Guo, Xipei Ren, Lingguo Bu. IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2022.'
+authors_html: '<strong>Jing Qu</strong>, Lizhen Cui, Wei Guo, Xipei Ren, Lingguo Bu'
 date: 2022-01-01
 venue: 'IEEE Transactions on Neural Systems and Rehabilitation Engineering'
 paperurl: 'https://doi.org/10.1109/TNSRE.2022.3183686'

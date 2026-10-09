@@ -4,6 +4,8 @@ collection: publications
 category: manuscripts
 permalink: /publication/asac-net-a-novel-multimodal-alignment-complementary-fusion-framework-for-eeg-fnirs-emotion
 excerpt: 'Kaining Fang, Jing Qu, Zixing Ding, Junhang Ding, Lingguo Bu. Information Fusion, 2026.'
+authors_html: 'Kaining Fang<sup>*</sup>, <strong>Jing Qu<sup>*</sup></strong>, Zixing Ding, Junhang Ding, Lingguo Bu'
+selected: true
 date: 2026-01-01
 venue: 'Information Fusion'
 paperurl: 'https://doi.org/10.1016/j.inffus.2026.104329'

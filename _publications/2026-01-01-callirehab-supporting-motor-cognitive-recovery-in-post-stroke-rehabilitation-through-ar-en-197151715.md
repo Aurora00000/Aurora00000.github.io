@@ -4,6 +4,7 @@ collection: publications
 category: manuscripts
 permalink: /publication/callirehab-supporting-motor-cognitive-recovery-in-post-stroke-rehabilitation-through-ar-en
 excerpt: 'Ziyi Wang, Jing Qu, Linxin Du, Zhiyuan Tang, Lingguo Bu, Xipei Ren. International Journal of Human–Computer Interaction, 2026.'
+authors_html: 'Ziyi Wang, <strong>Jing Qu</strong>, Linxin Du, Zhiyuan Tang, Lingguo Bu, Xipei Ren'
 date: 2026-01-01
 venue: 'International Journal of Human–Computer Interaction'
 paperurl: 'https://doi.org/10.1080/10447318.2025.2580543'

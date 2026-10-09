@@ -4,6 +4,7 @@ collection: publications
 category: manuscripts
 permalink: /publication/an-adaptive-design-approach-for-aigc-based-vr-rehabilitation-training-systems
 excerpt: 'Bu, Lingguo, Qu, Jing, Ding, Junhang, Wang, Chenyang, Li, Xinxin, Shi, Peihan. Journal of Engineering Design, 2025.'
+authors_html: 'Lingguo Bu, <strong>Jing Qu</strong>, Junhang Ding, Chenyang Wang, Xinxin Li, Peihan Shi'
 date: 2025-01-01
 venue: 'Journal of Engineering Design'
 paperurl: 'https://doi.org/10.1080/09544828.2025.2540239'

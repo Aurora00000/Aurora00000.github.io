@@ -4,6 +4,7 @@ collection: publications
 category: conferences
 permalink: /publication/understanding-the-impact-of-longitudinal-vr-training-on-users-with-mild-cognitive-impairme
 excerpt: 'Jing Qu, Shantong Zhu, Yiran Shen, Yanjie Zhang, Lingguo Bu. 2024 IEEE Conference Virtual Reality and 3D User Interfaces (VR), 2024.'
+authors_html: '<strong>Jing Qu</strong>, Shantong Zhu, Yiran Shen, Yanjie Zhang, Lingguo Bu'
 date: 2024-01-01
 venue: '2024 IEEE Conference Virtual Reality and 3D User Interfaces (VR)'
 paperurl: 'https://doi.org/10.1109/vr58804.2024.00077'

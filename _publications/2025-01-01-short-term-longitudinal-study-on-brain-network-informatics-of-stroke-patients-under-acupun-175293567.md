@@ -4,6 +4,7 @@ collection: publications
 category: manuscripts
 permalink: /publication/short-term-longitudinal-study-on-brain-network-informatics-of-stroke-patients-under-acupun
 excerpt: 'Jing Qu, Yijun Du, Jing Jing, Jie Wang, Lingguo Bu, Yonghui Wang. IEEE Journal of Biomedical and Health Informatics, 2025.'
+authors_html: '<strong>Jing Qu</strong>, Yijun Du, Jing Jing, Jie Wang, Lingguo Bu, Yonghui Wang'
 date: 2025-01-01
 venue: 'IEEE Journal of Biomedical and Health Informatics'
 paperurl: 'https://doi.org/10.1109/JBHI.2025.3527074'

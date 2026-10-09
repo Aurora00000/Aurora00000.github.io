@@ -4,6 +4,7 @@ collection: publications
 category: manuscripts
 permalink: /publication/developing-a-virtual-reality-healthcare-product-based-on-data-driven-concepts-a-case-study
 excerpt: 'Jing Qu, Yinuo Zhang, Weizhong Tang, Wenming Cheng, Yu Zhang, Lingguo Bu. Advanced Engineering Informatics, 2023.'
+authors_html: '<strong>Jing Qu<sup>*</sup></strong>, Yinuo Zhang<sup>*</sup>, Weizhong Tang, Wenming Cheng, Yu Zhang, Lingguo Bu'
 date: 2023-01-01
 venue: 'Advanced Engineering Informatics'
 paperurl: 'https://doi.org/10.1016/j.aei.2023.102118'

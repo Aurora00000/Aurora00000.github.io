@@ -211,46 +211,71 @@ body.lang-en .i18n-en-inline { display: inline !important; }
   line-height: 1.55;
 }
 
-.news-list {
-  position: relative;
-  margin-left: 0.35rem;
-  padding-left: 1.45rem;
-  border-left: 2px solid #dce7e8;
+.news-record-count {
+  margin: 0.55rem 0 0;
+  color: #61707c;
+  font-size: 0.84rem;
 }
 
-.news-item {
-  position: relative;
+.news-record-count strong { color: #d75d4a; }
+
+.news-year-list {
+  border-top: 1px solid #dce4e8;
+}
+
+.news-year-group {
   display: grid;
   grid-template-columns: 4.5rem minmax(0, 1fr);
-  gap: 0.85rem;
-  padding: 0.2rem 0 1.2rem;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #dce4e8;
 }
 
-.news-item:last-child { padding-bottom: 0; }
-.news-item::before {
-  content: '';
-  position: absolute;
-  top: 0.35rem;
-  left: -1.82rem;
-  width: 0.62rem;
-  height: 0.62rem;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  background: var(--home-coral);
-  box-shadow: 0 0 0 2px #efc9c2;
-}
-
-.news-item time {
-  color: var(--home-teal);
-  font-size: 0.84rem;
+.news-year-heading time {
+  color: #16827c;
+  font-size: 0.88rem;
   font-weight: 800;
 }
 
-.news-item p {
-  margin: 0;
-  color: #405462;
-  font-size: 0.9rem;
-  line-height: 1.58;
+.news-publication {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(8rem, 31%);
+  gap: 0.9rem;
+  padding: 0.45rem 0;
+}
+
+.news-publication:first-child { padding-top: 0; }
+.news-publication:last-child { padding-bottom: 0; }
+
+.news-publication-title {
+  color: #183c53 !important;
+  font-size: 0.87rem;
+  font-weight: 700;
+  line-height: 1.45;
+  text-decoration: none !important;
+}
+
+.news-publication-title:hover { color: #16827c !important; }
+
+.news-publication-venue {
+  color: #61707c;
+  font-size: 0.76rem;
+  line-height: 1.45;
+  text-align: right;
+}
+
+.publication-legend {
+  margin: -0.55rem 0 1rem;
+  color: #61707c;
+  font-size: 0.78rem;
+}
+
+.publication-legend sup,
+.paper-authors sup,
+.compact-publication-authors sup,
+.paper-box-authors sup {
+  color: #d75d4a;
+  font-weight: 800;
 }
 
 .jing-paper {
@@ -333,6 +358,71 @@ body.lang-en .i18n-en-inline { display: inline !important; }
   color: var(--home-teal) !important;
   background: #f7fbfb;
   font-size: 0.76rem;
+  font-weight: 750;
+  text-decoration: none !important;
+}
+
+.publication-subheading {
+  margin: 2rem 0 0.8rem;
+  color: #102a3c;
+  font-size: 1.08rem;
+}
+
+.publication-list {
+  border-top: 1px solid #dce4e8;
+}
+
+.publication-list-full { margin-top: 1rem; }
+
+.publication-year-group {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr);
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #dce4e8;
+}
+
+.publication-year {
+  margin: 0 !important;
+  color: #16827c !important;
+  font-size: 0.9rem !important;
+  font-weight: 800;
+  line-height: 1.5 !important;
+}
+
+.compact-publication {
+  padding: 0 0 1rem;
+}
+
+.compact-publication:last-child { padding-bottom: 0; }
+
+.compact-publication-title {
+  color: #183c53 !important;
+  font-size: 0.9rem;
+  font-weight: 750;
+  line-height: 1.45;
+  text-decoration: none !important;
+}
+
+.compact-publication-title:hover { color: #16827c !important; }
+
+.compact-publication-authors,
+.compact-publication-meta {
+  margin: 0.28rem 0 0;
+  color: #61707c;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.compact-publication-authors strong { color: #d75d4a; }
+
+.compact-publication-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.24rem;
+  margin-left: 0.35rem;
+  color: #16827c !important;
+  font-size: 0.74rem;
   font-weight: 750;
   text-decoration: none !important;
 }
@@ -497,7 +587,10 @@ body.lang-en .i18n-en-inline { display: inline !important; }
     align-items: flex-start;
     flex-direction: column;
   }
-  .news-item { grid-template-columns: 3.5rem minmax(0, 1fr); }
+  .news-year-group,
+  .publication-year-group { grid-template-columns: 3.5rem minmax(0, 1fr); }
+  .news-publication { grid-template-columns: 1fr; gap: 0.2rem; }
+  .news-publication-venue { text-align: left; }
 }
 
 @media (prefers-reduced-motion: reduce) {

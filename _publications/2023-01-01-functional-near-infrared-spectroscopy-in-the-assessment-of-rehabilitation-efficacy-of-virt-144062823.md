@@ -4,6 +4,7 @@ collection: publications
 category: manuscripts
 permalink: /publication/functional-near-infrared-spectroscopy-in-the-assessment-of-rehabilitation-efficacy-of-virt
 excerpt: 'Jing Qu, Yanjie Zhang, Lingguo Bu. International Journal of Industrial Ergonomics, 2023.'
+authors_html: '<strong>Jing Qu</strong>, Yanjie Zhang, Lingguo Bu'
 date: 2023-01-01
 venue: 'International Journal of Industrial Ergonomics'
 paperurl: 'https://doi.org/10.1016/j.ergon.2023.103500'

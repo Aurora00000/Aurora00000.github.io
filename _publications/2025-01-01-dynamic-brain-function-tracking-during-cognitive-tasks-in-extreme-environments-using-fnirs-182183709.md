@@ -4,6 +4,7 @@ collection: publications
 category: manuscripts
 permalink: /publication/dynamic-brain-function-tracking-during-cognitive-tasks-in-extreme-environments-using-fnirs
 excerpt: 'Lingguo Bu, Tan Zou, Yulin Zhang, Jing Qu, Zhengyi Lu, Yuqian Zhang, Si Li, Xin Wang. International Journal of Human–Computer Interaction, 2025.'
+authors_html: 'Lingguo Bu, Tan Zou, Yulin Zhang, <strong>Jing Qu</strong>, Zhengyi Lu, Yuqian Zhang, Si Li, Xin Wang'
 date: 2025-01-01
 venue: 'International Journal of Human–Computer Interaction'
 paperurl: 'https://doi.org/10.1080/10447318.2025.2470290'

@@ -4,6 +4,8 @@ collection: publications
 category: manuscripts
 permalink: /publication/development-of-a-novel-machine-learning-based-approach-for-brain-function-assessment-and-i
 excerpt: 'Jing Qu, Lizhen Cui, Wei Guo, Lingguo Bu, Zhenya Wang. Advanced Engineering Informatics, 2024.'
+authors_html: '<strong>Jing Qu</strong>, Lizhen Cui, Wei Guo, Lingguo Bu, Zhenya Wang'
+selected: true
 date: 2024-01-01
 venue: 'Advanced Engineering Informatics'
 paperurl: 'https://doi.org/10.1016/j.aei.2024.102461'

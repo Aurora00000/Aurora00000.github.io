@@ -4,6 +4,7 @@ collection: publications
 category: manuscripts
 permalink: /publication/a-training-and-assessment-system-for-human-computer-interaction-combining-fnirs-and-eye-tr
 excerpt: 'Qu, Jing, Bu, Lingguo, Zhao, Lei, Wang, Yonghui. Advanced Engineering Informatics, 2024.'
+authors_html: '<strong>Jing Qu</strong>, Lingguo Bu, Lei Zhao, Yonghui Wang'
 date: 2024-01-01
 venue: 'Advanced Engineering Informatics'
 paperurl: 'https://doi.org/10.1016/J.AEI.2024.102765'

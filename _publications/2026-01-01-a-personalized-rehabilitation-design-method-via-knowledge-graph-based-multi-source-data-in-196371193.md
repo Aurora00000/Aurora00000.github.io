@@ -4,6 +4,7 @@ collection: publications
 category: manuscripts
 permalink: /publication/a-personalized-rehabilitation-design-method-via-knowledge-graph-based-multi-source-data-in
 excerpt: 'Bofan Wang, Jing Qu, Xinxin Li, Chenyang Wang, Lingguo Bu. Advanced Engineering Informatics, 2026.'
+authors_html: 'Bofan Wang<sup>*</sup>, <strong>Jing Qu<sup>*</sup></strong>, Xinxin Li, Chenyang Wang, Lingguo Bu'
 date: 2026-01-01
 venue: 'Advanced Engineering Informatics'
 paperurl: 'https://doi.org/10.1016/j.aei.2025.104005'

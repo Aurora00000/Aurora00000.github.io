@@ -4,6 +4,7 @@ collection: publications
 category: manuscripts
 permalink: /publication/a-neuroergonomic-approach-to-assessing-motor-performance-in-stroke-patients-using-fnirs-an
 excerpt: 'Lingguo Bu, Jing Qu, Lei Zhao, Yanjie Zhang, Yonghui Wang. Applied Ergonomics, 2023.'
+authors_html: 'Lingguo Bu, <strong>Jing Qu</strong>, Lei Zhao, Yanjie Zhang, Yonghui Wang'
 date: 2023-01-01
 venue: 'Applied Ergonomics'
 paperurl: 'https://doi.org/10.1016/j.apergo.2023.103979'
