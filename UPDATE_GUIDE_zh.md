@@ -24,14 +24,30 @@ F:\实验室数据\个人主页
 _pages/about.md
 ```
 
-这里控制首页主体内容，包括：
+这里控制新版单页首页的主体内容，包括：
 
-- About Me
-- News
-- Research Interests
-- Contact
+- About / 个人简介
+- Research / 研究方向
+- News / 最新动态
+- Selected Publications / 代表性论文
+- Education / 教育经历
+- Service and Leadership / 学术服务
+- Honors and Awards / 荣誉奖励
+- Links / 学术链接
 
-改文字时，直接改对应段落即可。
+首页内容同时包含英文和中文。英文内容使用：
+
+```html
+class="i18n-en"
+```
+
+中文内容使用：
+
+```html
+class="i18n-zh"
+```
+
+修改一个栏目时，建议同步修改对应的中英文内容。
 
 ### 2. 修改左侧个人信息栏
 
@@ -48,7 +64,7 @@ author:
   avatar           : "profile.png"
   name             : "Jing Qu"
   bio              : "..."
-  location         : "..."
+  location         :
   employer         : "Shandong University"
   email            : your@email.com
   orcid            : "https://orcid.org/0000-0003-4783-9244"
@@ -82,7 +98,18 @@ images/profile.png
 _data/navigation.yml
 ```
 
-例如要增加或删除导航项，就改这里。
+新版导航是页内跳转。例如：
+
+```yaml
+- title: "Research"
+  url: /#research
+```
+
+这里的 `research` 必须与 `_pages/about.md` 中的栏目编号一致：
+
+```html
+<section class="jing-section" id="research">
+```
 
 ## 二、更新 News
 
@@ -92,20 +119,17 @@ _data/navigation.yml
 _pages/about.md
 ```
 
-找到：
+找到 `<div class="news-list">`，在其中增加一条：
 
-```markdown
-# 🔥 News
+```html
+<article class="news-item">
+  <time datetime="2026-06">2026.06</time>
+  <p class="i18n-en">English news text.</p>
+  <p class="i18n-zh">中文动态内容。</p>
+</article>
 ```
 
-按这种格式添加：
-
-```markdown
-- *2026.06*: Our paper xxx was accepted by xxx.
-- *2025.12*: I received xxx award.
-```
-
-建议最新消息放在最上面。
+建议把最新消息放在最上面，并只写已经确认的信息。
 
 ## 三、更新 Honors and Awards
 
@@ -131,6 +155,8 @@ _pages/honors.md
 
 注意：奖项最好写真实、可核对的信息，不确定的先不要写。
 
+首页还会显示一个简要 Honors 栏目。确认奖项后，也需要在 `_pages/about.md` 中找到 `id="honors"` 的部分并同步更新。
+
 ## 四、更新 Service and Leadership
 
 编辑：
@@ -153,32 +179,36 @@ _pages/service.md
 - *International Journal of Human-Computer Studies* (Elsevier), reviewer, 2026.
 ```
 
+首页也有审稿服务摘要。新增服务后，在 `_pages/about.md` 中找到 `id="services"`，复制一行 `service-item` 并修改年份、角色和期刊名。
+
 ## 五、更新精选论文卡片
 
-编辑：
+新版首页和独立论文页都展示精选论文：
 
 ```text
+_pages/about.md
 _pages/publications.html
 ```
 
-每篇论文卡片大概长这样：
+首页中的每篇论文卡片大概长这样：
 
 ```html
-<div class="paper-box">
-  <div class="paper-box-image">
-    <figure class="paper-figure">
-      <div class="paper-badge">Information Fusion 2026</div>
-      <img src="/images/paper-asac-net.jpg" alt="Graphical abstract for ASAC-Net" />
-    </figure>
+<article class="jing-paper">
+  <div class="jing-paper-media">
+    <span class="venue-badge">期刊或会议 2026</span>
+    <img src="/images/paper-new-work.jpg" alt="论文图说明" />
   </div>
-  <div class="paper-box-text">
-    <p class="paper-box-title"><a href="论文 DOI 链接">论文标题</a></p>
-    <p class="paper-box-authors">作者列表</p>
-    <p class="paper-box-summary">一句话简介</p>
-    <p class="paper-box-links">[<a href="论文 DOI 链接">DOI</a>]</p>
+  <div class="jing-paper-body">
+    <h3>论文标题</h3>
+    <p class="paper-authors">作者列表</p>
+    <p class="i18n-en">English summary.</p>
+    <p class="i18n-zh">中文简介。</p>
+    <div class="jing-paper-links"><a href="论文 DOI 链接">DOI</a></div>
   </div>
-</div>
+</article>
 ```
+
+如果希望独立的 Publications 页面也同步显示这篇精选论文，再按该页面已有的 `paper-box` 格式增加一次。
 
 如果要换论文图：
 
@@ -335,3 +365,17 @@ images/xxx.jpg
 - 图片文件名尽量用英文、数字、短横线。
 - 论文和奖项不要写不确定的信息。
 - 重要改动前可以先备份对应文件。
+
+## 十一、新版首页样式和功能文件
+
+通常只改内容时，不需要动下面两个文件：
+
+```text
+_sass/layout/_jing-home.scss
+assets/js/jing-home.js
+```
+
+- `_jing-home.scss` 控制颜色、卡片、论文图和手机布局。
+- `jing-home.js` 控制中英文切换和右下角返回顶部按钮。
+
+如果只是更新个人简介、论文、动态或服务，优先只改 `_pages/about.md`。

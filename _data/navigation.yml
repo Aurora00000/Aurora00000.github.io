@@ -1,17 +1,17 @@
-# Header navigation.
-
 main:
-  - title: "Home"
-    url: /
-
+  - title: "About"
+    url: /#about
+  - title: "Research"
+    url: /#research
+  - title: "News"
+    url: /#news
   - title: "Publications"
-    url: /publications/
-
-  - title: "Service"
-    url: /service/
-
+    url: /#publications
+  - title: "Education"
+    url: /#education
+  - title: "Services"
+    url: /#services
   - title: "Honors"
-    url: /honors/
-
+    url: /#honors
   - title: "CV"
     url: /cv/
