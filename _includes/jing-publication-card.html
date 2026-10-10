@@ -1,0 +1,32 @@
+{% assign paper = include.paper %}
+<article class="publication-card" data-year="{{ paper.year }}" data-topic="{{ paper.topic }}" data-first-author="{% if paper.first_author %}true{% else %}false{% endif %}" data-cofirst="{% if paper.authors_html contains '<sup>*</sup>' %}true{% else %}false{% endif %}">
+  <div class="publication-card-media">
+    <a href="{{ paper.paperurl }}" target="_blank" rel="noopener" aria-label="Open paper: {{ paper.title | escape }}">
+      {% if paper.image %}
+        <img src="{{ paper.image }}" alt="Figure from {{ paper.title | escape }}" loading="lazy" />
+      {% else %}
+        <span class="publication-cover" role="img" aria-label="Title preview for {{ paper.title | escape }}">
+          <span class="publication-cover-mark"><i class="fas fa-file-alt" aria-hidden="true"></i></span>
+          <span class="publication-cover-venue">{{ paper.short_venue }}</span>
+          <span class="publication-cover-title">{{ paper.title | truncatewords: 12 }}</span>
+          <span class="publication-cover-doi">DOI <i class="fas fa-external-link-alt" aria-hidden="true"></i></span>
+        </span>
+      {% endif %}
+    </a>
+    <span class="publication-card-badge">{{ paper.short_venue }}</span>
+  </div>
+  <div class="publication-card-content">
+    <h4><a href="{{ paper.paperurl }}" target="_blank" rel="noopener">{{ paper.title }}</a></h4>
+    <p class="publication-card-venue">{{ paper.venue }} ({{ paper.year }})</p>
+    <p class="publication-card-authors">{{ paper.authors_html }}</p>
+    <div class="publication-card-tags">
+      <span>{{ paper.year }}</span>
+      <span>{{ paper.topic }}</span>
+      {% if paper.first_author %}<span><span class="i18n-en-inline">First Author</span><span class="i18n-zh-inline">第一作者</span></span>{% endif %}
+      {% if paper.authors_html contains '<sup>*</sup>' %}<span><span class="i18n-en-inline">Equal Contribution</span><span class="i18n-zh-inline">共同一作</span></span>{% endif %}
+    </div>
+    <div class="publication-card-actions">
+      <a href="{{ paper.paperurl }}" target="_blank" rel="noopener"><i class="fas fa-file-alt" aria-hidden="true"></i> Paper</a>
+    </div>
+  </div>
+</article>

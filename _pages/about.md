@@ -77,29 +77,14 @@ redirect_from:
   <div class="section-heading">
     <p class="section-kicker"><i class="fas fa-bullhorn" aria-hidden="true"></i><span class="i18n-en-inline">Updates</span><span class="i18n-zh-inline">最新动态</span></p>
     <h2><span class="i18n-en-inline">News</span><span class="i18n-zh-inline">动态</span></h2>
-    <p class="news-record-count">
-      <span class="i18n-en-inline"><strong>{{ site.data.publications | size }}</strong> publications, generated from the public publication record.</span>
-      <span class="i18n-zh-inline">已收录 <strong>{{ site.data.publications | size }}</strong> 篇论文，由公开论文记录自动生成。</span>
-    </p>
   </div>
 
-  {% assign publication_years = "2026,2025,2024,2023,2022" | split: "," %}
-  {% assign sorted_publications = site.data.publications %}
-  <div class="news-year-list">
-    {% for year in publication_years %}
-      <div class="news-year-group">
-        <div class="news-year-heading"><time datetime="{{ year }}">{{ year }}</time></div>
-        <div class="news-year-entries">
-          {% for post in sorted_publications %}
-            {% if post.year == year %}
-              <article class="news-publication">
-                <a class="news-publication-title" href="{{ post.paperurl }}" target="_blank" rel="noopener">{{ post.title }}</a>
-                <span class="news-publication-venue">{{ post.venue }}</span>
-              </article>
-            {% endif %}
-          {% endfor %}
-        </div>
-      </div>
+  <div class="news-feed">
+    {% for paper in site.data.publications %}
+      <article class="news-feed-item">
+        <time datetime="{{ paper.year }}">{{ paper.year }}</time>
+        <p><span class="i18n-en-inline">Published in</span><span class="i18n-zh-inline">发表于</span> <strong>{{ paper.short_venue }}</strong>: <a href="{{ paper.paperurl }}" target="_blank" rel="noopener">{{ paper.title }}</a></p>
+      </article>
     {% endfor %}
   </div>
 </section>
@@ -108,76 +93,12 @@ redirect_from:
   <div class="section-heading section-heading-row">
     <div>
       <p class="section-kicker"><i class="fas fa-book-open" aria-hidden="true"></i><span class="i18n-en-inline">Research Output</span><span class="i18n-zh-inline">科研成果</span></p>
-      <h2><span class="i18n-en-inline">Selected Publications</span><span class="i18n-zh-inline">代表性论文</span></h2>
+      <h2><span class="i18n-en-inline">Publications</span><span class="i18n-zh-inline">论文成果</span></h2>
     </div>
     <a class="section-link" href="/publications/"><span class="i18n-en-inline">View all publications</span><span class="i18n-zh-inline">查看全部论文</span><i class="fas fa-arrow-right" aria-hidden="true"></i></a>
   </div>
-
   <p class="publication-legend"><sup>*</sup> <span class="i18n-en-inline">Equal contribution. Jing Qu is shown in bold.</span><span class="i18n-zh-inline">共同第一作者；Jing Qu 以粗体显示。</span></p>
-
-  <article class="jing-paper">
-    <div class="jing-paper-media">
-      <span class="venue-badge">Information Fusion 2026</span>
-      <img src="/images/paper-asac-net.jpg" alt="Graphical abstract for ASAC-Net" loading="lazy" />
-    </div>
-    <div class="jing-paper-body">
-      <h3>ASAC-Net: A novel multimodal alignment-complementary fusion framework for EEG-fNIRS emotion recognition</h3>
-      <p class="paper-authors">Kaining Fang<sup>*</sup>, <strong>Jing Qu<sup>*</sup></strong>, Zixing Ding, Junhang Ding, Lingguo Bu</p>
-      <p class="i18n-en">A multimodal fusion framework emphasizing alignment and complementary information across EEG and fNIRS signals.</p>
-      <p class="i18n-zh">一种面向 EEG-fNIRS 情感识别的多模态融合框架，强调跨信号对齐与互补信息建模。</p>
-      <div class="jing-paper-links"><a href="https://doi.org/10.1016/j.inffus.2026.104329" target="_blank" rel="noopener"><i class="fas fa-external-link-alt" aria-hidden="true"></i>DOI</a></div>
-    </div>
-  </article>
-
-  <article class="jing-paper">
-    <div class="jing-paper-media">
-      <span class="venue-badge">IJHCS 2025</span>
-      <img src="/images/paper-ar-cognitive.jpg" alt="Graphical abstract for AR-based adaptive cognitive training" loading="lazy" />
-    </div>
-    <div class="jing-paper-body">
-      <h3>Design and evaluation of AR-based adaptive human-computer interaction cognitive training</h3>
-      <p class="paper-authors">Man Chu, <strong>Jing Qu</strong>, Tan Zou, Qinbiao Li, Lingguo Bu, Yiran Shen</p>
-      <p class="i18n-en">An augmented-reality cognitive training study combining adaptive interaction design with multimodal assessment.</p>
-      <p class="i18n-zh">一项增强现实认知训练研究，将自适应交互设计与多模态评估相结合。</p>
-      <div class="jing-paper-links"><a href="https://doi.org/10.1016/j.ijhcs.2025.103504" target="_blank" rel="noopener"><i class="fas fa-external-link-alt" aria-hidden="true"></i>DOI</a></div>
-    </div>
-  </article>
-
-  <article class="jing-paper">
-    <div class="jing-paper-media">
-      <span class="venue-badge">AEI 2024</span>
-      <img src="/images/paper-brain-ml.jpg" alt="Graphical abstract for brain function assessment software" loading="lazy" />
-    </div>
-    <div class="jing-paper-body">
-      <h3>Development of a novel machine learning-based approach for brain function assessment and integrated software solution</h3>
-      <p class="paper-authors"><strong>Jing Qu</strong>, Lizhen Cui, Wei Guo, Lingguo Bu, Zhenya Wang</p>
-      <p class="i18n-en">A machine-learning workflow and integrated software solution for EEG/fNIRS processing and intelligent assessment.</p>
-      <p class="i18n-zh">面向 EEG/fNIRS 处理与智能评估的机器学习流程及集成软件方案。</p>
-      <div class="jing-paper-links"><a href="https://doi.org/10.1016/j.aei.2024.102461" target="_blank" rel="noopener"><i class="fas fa-external-link-alt" aria-hidden="true"></i>DOI</a></div>
-    </div>
-  </article>
-
-  <h3 class="publication-subheading"><span class="i18n-en-inline">More Publications</span><span class="i18n-zh-inline">更多论文</span></h3>
-  <div class="publication-list">
-    {% for year in publication_years %}
-      <div class="publication-year-group">
-        <h4 class="publication-year">{{ year }}</h4>
-        <div class="publication-year-entries">
-          {% for post in sorted_publications %}
-            {% if post.year == year %}
-              {% unless post.selected %}
-                <article class="compact-publication">
-                  <a class="compact-publication-title" href="{{ post.paperurl }}" target="_blank" rel="noopener">{{ post.title }}</a>
-                  <p class="compact-publication-authors">{{ post.authors_html }}</p>
-                  <p class="compact-publication-meta">{{ post.venue }} · {{ year }} <a class="compact-publication-link" href="{{ post.paperurl }}" target="_blank" rel="noopener" aria-label="Open DOI for {{ post.title }}"><i class="fas fa-external-link-alt" aria-hidden="true"></i> DOI</a></p>
-                </article>
-              {% endunless %}
-            {% endif %}
-          {% endfor %}
-        </div>
-      </div>
-    {% endfor %}
-  </div>
+  {% include jing-publication-browser.html %}
 </section>
 
 <section class="jing-section split-section" id="education">

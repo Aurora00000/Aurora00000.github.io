@@ -113,7 +113,7 @@ _data/navigation.yml
 
 ## 二、更新 News
 
-首页 News 会从 `_data/publications.yml` 自动读取全部论文，并按年份生成动态时间线。新增或修改论文记录后，News 会一起更新，不需要再手工编辑 `_pages/about.md`。
+首页 News 会从 `_data/publications.yml` 自动读取全部论文，并生成带年份徽标的动态卡片。新增或修改论文记录后，News 会一起更新，不需要再手工编辑 `_pages/about.md`。只有确切年份的记录才显示年份，不要把不确定的发表日写成具体日期。
 
 如果以后要加入论文以外的消息，例如获奖、报告或入职信息，可以在 `_pages/about.md` 的 `id="news"` 栏目中另加一条手写消息。只写已经确认的信息。
 
@@ -167,54 +167,17 @@ _pages/service.md
 
 首页也有审稿服务摘要。新增服务后，在 `_pages/about.md` 中找到 `id="services"`，复制一行 `service-item` 并修改年份、角色和期刊名。
 
-## 五、更新精选论文卡片
+## 五、更新论文图文卡片
 
-新版首页和独立论文页都展示精选论文：
+首页和独立 Publications 页的 20 篇论文现在共用一套图文卡片。卡片直接读取 `_data/publications.yml`，不需要改页面里的 HTML。
 
-```text
-_pages/about.md
-_pages/publications.html
+如有论文原图，把 JPG 或 PNG 放进 `images/publications/`，再在对应论文数据中写：
+
+```yaml
+image: '/images/publications/paper-new-work.jpg'
 ```
 
-首页中的每篇论文卡片大概长这样：
-
-```html
-<article class="jing-paper">
-  <div class="jing-paper-media">
-    <span class="venue-badge">期刊或会议 2026</span>
-    <img src="/images/paper-new-work.jpg" alt="论文图说明" />
-  </div>
-  <div class="jing-paper-body">
-    <h3>论文标题</h3>
-    <p class="paper-authors">作者列表</p>
-    <p class="i18n-en">English summary.</p>
-    <p class="i18n-zh">中文简介。</p>
-    <div class="jing-paper-links"><a href="论文 DOI 链接">DOI</a></div>
-  </div>
-</article>
-```
-
-精选论文卡片仍需要在 `_pages/about.md` 和 `_pages/publications.html` 中各维护一次；卡片下方的“更多论文”和完整论文清单会从 `_data/publications.yml` 自动生成。
-
-如果要换论文图：
-
-1. 把图片放到：
-
-```text
-images/
-```
-
-2. 修改图片路径，例如：
-
-```html
-<img src="/images/new-paper-image.jpg" alt="..." />
-```
-
-建议图片命名用英文和短横线，例如：
-
-```text
-paper-new-work.jpg
-```
+没有 `image` 字段时，卡片会显示论文题名预览。建议只使用该论文正文图、图形摘要或作者单位发布的原图，不要用其他论文的图片。
 
 ## 六、更新完整论文列表
 
@@ -229,13 +192,17 @@ _data/publications.yml
 ```yaml
 - year: '2026'
   title: '论文标题'
+  short_venue: '期刊简称 2026'
   venue: '期刊或会议名称'
   paperurl: 'https://doi.org/...'
   authors_html: 'Author A, <strong>Jing Qu</strong>, Author C'
+  topic: 'Rehabilitation'
+  image: '/images/publications/paper-new-work.jpg'
+  first_author: false
   selected: false
 ```
 
-把新论文放在对应年份的位置，年份新的排在前面。保存后，三个论文区域都会自动更新。
+把新论文放在对应年份的位置，年份新的排在前面。`topic` 请从现有的 `VR / AR`、`Brain Signals`、`Rehabilitation`、`Design Methods` 中选择一项，筛选按钮会据此工作。只有实际为第一作者时才设置 `first_author: true`。保存后，News、首页论文区和独立论文页都会自动更新。
 
 详细论文元数据还保存在：
 
@@ -263,21 +230,21 @@ authors_html:
 authors_html: 'Author A, <strong>Jing Qu</strong>, Author C'
 ```
 
-如果出版社明确标注两位作者贡献相同，可以用 `*` 标识共同第一作者：
+如果论文或作者单位的正式报道明确标注两位作者贡献相同，可以用 `*` 标识共同第一作者：
 
 ```yaml
 authors_html: 'Author A<sup>*</sup>, <strong>Jing Qu<sup>*</sup></strong>, Author C'
 ```
 
-页面会自动显示说明：`* Equal contribution / 共同第一作者`。只有得到论文或出版社页面确认后才添加这个符号。
+页面会自动显示说明：`* Equal contribution / 共同第一作者`。只有得到论文或作者单位的正式报道确认后才添加这个符号。
 
-如果希望一篇论文出现在首页三张精选论文卡片中，可以在 `_data/publications.yml` 中设为：
+如果希望一篇论文放在“Selected Publications”区域，可以在 `_data/publications.yml` 中设为：
 
 ```yaml
 selected: true
 ```
 
-`selected: true` 会让该论文不再重复出现在首页“更多论文”列表中，但独立 Publications 页面仍会显示它。精选卡片的标题、图片和简介仍需按“第五节”的方法同步维护。
+`selected: true` 会让该论文出现在精选区域；`selected: false` 则出现在“More Publications”。两种卡片的版式完全相同，独立 Publications 页面也会同步显示。
 
 常用分类：
 

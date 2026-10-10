@@ -1,0 +1,21 @@
+{% assign papers = site.data.publications %}
+<div class="publication-browser">
+  <div class="publication-filter-bar" role="group" aria-label="Filter publications">
+    <button class="publication-filter is-active" type="button" data-filter="all" aria-pressed="true"><span class="i18n-en-inline">All</span><span class="i18n-zh-inline">全部</span> <span class="publication-filter-count">{{ papers | size }}</span></button>
+    <button class="publication-filter" type="button" data-filter="first" aria-pressed="false"><span class="i18n-en-inline">First Author</span><span class="i18n-zh-inline">第一作者</span> <span class="publication-filter-count"></span></button>
+    <button class="publication-filter" type="button" data-filter="cofirst" aria-pressed="false"><span class="i18n-en-inline">Equal Contribution</span><span class="i18n-zh-inline">共同一作</span> <span class="publication-filter-count"></span></button>
+    <button class="publication-filter" type="button" data-filter="VR / AR" aria-pressed="false">VR / AR <span class="publication-filter-count"></span></button>
+    <button class="publication-filter" type="button" data-filter="Brain Signals" aria-pressed="false"><span class="i18n-en-inline">Brain Signals</span><span class="i18n-zh-inline">脑信号</span> <span class="publication-filter-count"></span></button>
+    <button class="publication-filter" type="button" data-filter="Rehabilitation" aria-pressed="false"><span class="i18n-en-inline">Rehabilitation</span><span class="i18n-zh-inline">康复</span> <span class="publication-filter-count"></span></button>
+    <button class="publication-filter" type="button" data-filter="Design Methods" aria-pressed="false"><span class="i18n-en-inline">Design Methods</span><span class="i18n-zh-inline">设计方法</span> <span class="publication-filter-count"></span></button>
+  </div>
+  <p class="publication-filter-status" aria-live="polite"></p>
+  <div class="publication-group">
+    <h3><span class="i18n-en-inline">Selected Publications</span><span class="i18n-zh-inline">代表性论文</span></h3>
+    {% for paper in papers %}{% if paper.selected %}{% include jing-publication-card.html paper=paper %}{% endif %}{% endfor %}
+  </div>
+  <div class="publication-group">
+    <h3><span class="i18n-en-inline">More Publications</span><span class="i18n-zh-inline">更多论文</span></h3>
+    {% for paper in papers %}{% unless paper.selected %}{% include jing-publication-card.html paper=paper %}{% endunless %}{% endfor %}
+  </div>
+</div>

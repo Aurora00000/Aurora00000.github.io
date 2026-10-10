@@ -33,6 +33,38 @@
       });
     });
 
+    document.querySelectorAll('.publication-browser').forEach(function (browser) {
+      var cards = Array.prototype.slice.call(browser.querySelectorAll('.publication-card'));
+      var buttons = browser.querySelectorAll('.publication-filter');
+
+      function matches(card, filter) {
+        if (filter === 'all') return true;
+        if (filter === 'first') return card.dataset.firstAuthor === 'true';
+        if (filter === 'cofirst') return card.dataset.cofirst === 'true';
+        return card.dataset.topic === filter;
+      }
+
+      buttons.forEach(function (button) {
+        var filter = button.dataset.filter;
+        var count = cards.filter(function (card) { return matches(card, filter); }).length;
+        var countLabel = button.querySelector('.publication-filter-count');
+        if (countLabel) countLabel.textContent = count;
+
+        button.addEventListener('click', function () {
+          buttons.forEach(function (item) {
+            var active = item === button;
+            item.classList.toggle('is-active', active);
+            item.setAttribute('aria-pressed', active ? 'true' : 'false');
+          });
+
+          cards.forEach(function (card) { card.hidden = !matches(card, filter); });
+          browser.querySelectorAll('.publication-group').forEach(function (group) {
+            group.hidden = !group.querySelector('.publication-card:not([hidden])');
+          });
+        });
+      });
+    });
+
     var backToTop = document.querySelector('.home-back-top');
     if (!backToTop) return;
 
