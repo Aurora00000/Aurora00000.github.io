@@ -2,6 +2,8 @@
 
 This repository contains an Academic Pages / Jekyll personal homepage for Jing Qu.
 
+中文维护流程：[个人主页修改与发布流程](WEBSITE_UPDATE_WORKFLOW_zh.md)
+
 ## Content Sources
 
 - Profile metadata: ORCID, <https://orcid.org/0000-0003-4783-9244>
@@ -10,21 +12,21 @@ This repository contains an Academic Pages / Jekyll personal homepage for Jing Q
 
 ## Main Files
 
-- `_config.yml`: site title, author sidebar, ORCID, DBLP, and GitHub Pages placeholders.
+- `_config.yml`: site title, author sidebar, academic links, and GitHub Pages configuration.
 - `_pages/about.md`: homepage content.
+- `_data/publications.yml`: publication cards, authorship labels, topics, and DOI links.
 - `_pages/publications.html`: publication listing page.
+- `_pages/honors.md`: honors and awards.
+- `_pages/service.md`: academic service and leadership.
 - `_pages/cv.md`: compact CV page.
 - `_publications/`: ORCID-derived publication entries.
-- `images/profile.png`: placeholder profile image.
+- `images/profile.png`: profile image.
+- `WEBSITE_UPDATE_WORKFLOW_zh.md`: step-by-step Chinese maintenance and publishing guide.
 
-## Before Publishing
+## Publishing
 
-Replace the following placeholders:
+The production site is published from the `main` branch at:
 
-- GitHub username/site URL in `_config.yml`
-- `Location TBD`
-- `Email TBD`
-- `Current position/title: TBD`
-- `images/profile.png`, if a formal profile photo is available
+<https://Aurora00000.github.io/>
 
-GitHub Pages can build the site directly from this repository once it is pushed to `Aurora00000/Aurora00000.github.io`.
+For editing, verification, publication, and rollback instructions, follow [WEBSITE_UPDATE_WORKFLOW_zh.md](WEBSITE_UPDATE_WORKFLOW_zh.md). Email, location, and a formal profile photo remain optional and can be added later.
