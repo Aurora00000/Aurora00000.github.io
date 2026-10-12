@@ -5,9 +5,9 @@ permalink: /honors/
 author_profile: true
 ---
 
-# Honors and Awards
+I have received **4 national-level honors, 4 provincial or ministerial-level honors, and nearly 30 university-level honors**. Selected distinctions are listed below.
 
-I have received **4 national-level honors, 4 provincial or ministerial-level honors, and nearly 30 university-level honors**. Selected distinctions are listed below. / 累计获得**国家级荣誉4项、省部级荣誉4项、校级荣誉近30项**；以下为部分代表性荣誉。
+累计获得**国家级荣誉4项、省部级荣誉4项、校级荣誉近30项**；以下为部分代表性荣誉。
 
 ## Scholarship and Research Recognition
 

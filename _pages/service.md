@@ -5,8 +5,6 @@ permalink: /service/
 author_profile: true
 ---
 
-# Service and Leadership
-
 ## Peer Review Service
 
 Reviewer for the following journals, based on public ORCID peer-review records and ISSN metadata:
