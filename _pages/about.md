@@ -20,13 +20,22 @@ redirect_from:
   </div>
 
   <div class="i18n-en">
-    <p class="home-lead">Welcome to my homepage. I am affiliated with <strong>Shandong University</strong>, and my research lies at the intersection of human-computer interaction, healthcare, and intelligent systems.</p>
-    <p>I study virtual and augmented reality rehabilitation, multimodal neuroergonomics, brain function assessment, affective computing, and data-driven design for intelligent rehabilitation. My work combines interaction design with fNIRS, EEG, eye tracking, behavioral signals, and machine learning.</p>
+    <p class="home-lead">I am a doctoral student at <strong>Shandong University</strong>, working at the intersection of artificial intelligence, brain-computer interfaces, human-computer interaction, and virtual reality rehabilitation.</p>
+    <p>Through the National Key R&amp;D Program of China and other national and provincial research projects, I have worked on core algorithms, system development, and application validation. My research serves people with stroke, autism spectrum disorder, and cognitive impairment. I regularly conduct studies in hospitals and rehabilitation centers, with more than <strong>1,000 patient service encounters</strong>.</p>
+    <p>With Shandong University as the first affiliation, I have published <strong>22 papers</strong>: 10 as first author, 5 as equal-first author, and 4 as second author with my supervisor as first author. Eleven appear in CCF A venues or CAS Q1 Top journals; the combined journal impact-factor total is nearly 150. I have applied for 7 invention patents (4 granted) and hold 2 software copyrights. Related work was selected for the <strong>2025 Shandong Provincial Graduate Student Innovation Achievements</strong>.</p>
   </div>
 
   <div class="i18n-zh">
-    <p class="home-lead">欢迎访问我的个人主页。我现就读或工作于<strong>山东大学</strong>，研究方向位于人机交互、医疗健康与智能系统的交叉领域。</p>
-    <p>我的研究包括虚拟现实与增强现实康复、多模态神经工效学、脑功能评估、情感计算，以及智能康复产品的数据驱动设计。相关工作结合了交互设计、fNIRS、EEG、眼动、行为信号与机器学习方法。</p>
+    <p class="home-lead">我现为<strong>山东大学博士研究生</strong>，聚焦人工智能、脑机接口、人机交互与虚拟现实康复等交叉方向。</p>
+    <p>在参与国家重点研发计划等国家级、省部级科研项目过程中，我承担核心算法、系统研发与应用验证工作，面向脑卒中、孤独症和认知障碍等群体开展智能康复研究。长期赴医院及康复机构开展实验验证与实践服务，<strong>累计服务患者超千人次</strong>。</p>
+    <p>以山东大学为第一单位，相关研究已发表<strong>学术论文22篇</strong>，其中第一作者10篇、共同第一作者5篇、导师第一作者且本人第二作者4篇；CCF A类及中科院一区TOP论文共11篇，累计影响因子近150。累计申请发明专利7项（已授权4项），获软件著作权2项。相关成果入选<strong>2025年山东省研究生创新成果</strong>。</p>
+  </div>
+
+  <div class="home-metrics" aria-label="Research highlights">
+    <div><strong>22</strong><span class="i18n-en-inline">Publications</span><span class="i18n-zh-inline">学术论文</span></div>
+    <div><strong>11</strong><span class="i18n-en-inline">CCF A / CAS Q1 Top</span><span class="i18n-zh-inline">CCF A类及中科院一区TOP</span></div>
+    <div><strong>1,000+</strong><span class="i18n-en-inline">Patient service encounters</span><span class="i18n-zh-inline">患者服务人次</span></div>
+    <div><strong>7</strong><span class="i18n-en-inline">Patent applications</span><span class="i18n-zh-inline">发明专利申请</span></div>
   </div>
 
   <nav class="home-actions" aria-label="Academic profile links">
@@ -80,6 +89,14 @@ redirect_from:
   </div>
 
   <div class="news-feed">
+    <article class="news-feed-item">
+      <time datetime="2026">2026</time>
+      <p><span class="i18n-en-inline">Received the <strong>ICCSE 2026 Most Popular Poster Award</strong>.</span><span class="i18n-zh-inline">获得<strong>ICCSE 2026 Most Popular Poster Award</strong>。</span></p>
+    </article>
+    <article class="news-feed-item">
+      <time datetime="2025">2025</time>
+      <p><span class="i18n-en-inline">Research selected for the <strong>Shandong Provincial Graduate Student Innovation Achievements</strong>.</span><span class="i18n-zh-inline">科研成果入选<strong>山东省研究生创新成果</strong>。</span></p>
+    </article>
     {% for paper in site.data.publications %}
       <article class="news-feed-item">
         <time datetime="{{ paper.year }}">{{ paper.year }}</time>
@@ -109,8 +126,8 @@ redirect_from:
   <div class="timeline-entry">
     <span class="timeline-dot" aria-hidden="true"></span>
     <h3>Shandong University</h3>
-    <p class="i18n-en">Education and research affiliation. Degree, school, and dates will be added after confirmation.</p>
-    <p class="i18n-zh">教育与科研单位。学位、学院及起止时间将在确认后补充。</p>
+    <p class="i18n-en"><strong>Doctoral student</strong>, 2025 cohort. Research in artificial intelligence, brain-computer interfaces, human-computer interaction, and intelligent rehabilitation.</p>
+    <p class="i18n-zh"><strong>博士研究生</strong>，2025级。研究方向包括人工智能、脑机接口、人机交互与智能康复。</p>
   </div>
 </section>
 
@@ -126,6 +143,9 @@ redirect_from:
     <div class="service-item"><span>2026</span><p><strong>Reviewer</strong>, <em>Complementary Therapies in Medicine</em></p></div>
     <div class="service-item"><span>2026</span><p><strong>Reviewer</strong>, <em>Geriatric Nursing</em></p></div>
     <div class="service-item"><span>2026</span><p><strong>Reviewer</strong>, <em>International Journal of Human-Computer Studies</em></p></div>
+    <div class="service-item"><span>2025</span><p><span class="i18n-en-inline"><strong>Class monitor</strong>, 2025 doctoral cohort</span><span class="i18n-zh-inline"><strong>2025级博士班班长</strong></span></p></div>
+    <div class="service-item"><span><span class="i18n-en-inline">Current</span><span class="i18n-zh-inline">现任</span></span><p><span class="i18n-en-inline"><strong>Committee member</strong>, First Graduate Student Party Branch of Software and Data Engineering</span><span class="i18n-zh-inline"><strong>软件与数据工程研究生第一党支部支委</strong></span></p></div>
+    <div class="service-item"><span>6</span><p><span class="i18n-en-inline"><strong>Academic presentations</strong> at domestic and international conferences and events</span><span class="i18n-zh-inline">在国内外学术会议及学术活动中作<strong>6次报告</strong></span></p></div>
   </div>
 </section>
 
@@ -137,11 +157,15 @@ redirect_from:
     </div>
     <a class="section-link" href="/honors/"><span class="i18n-en-inline">Open section</span><span class="i18n-zh-inline">打开栏目</span><i class="fas fa-arrow-right" aria-hidden="true"></i></a>
   </div>
-  <div class="honors-note">
-    <i class="fas fa-shield-alt" aria-hidden="true"></i>
-    <p class="i18n-en">This section is reserved for verified awards, scholarships, and honors. No unverified same-name web results are displayed.</p>
-    <p class="i18n-zh">本栏目用于展示已核实的奖项、奖学金与荣誉。目前不展示无法排除同名歧义的网络检索结果。</p>
-  </div>
+  <p class="honors-summary i18n-en">4 national-level, 4 provincial or ministerial-level, and nearly 30 university-level honors.</p>
+  <p class="honors-summary i18n-zh">累计获得国家级荣誉4项、省部级荣誉4项、校级荣誉近30项。</p>
+  <ul class="honors-highlights">
+    <li><span class="i18n-en-inline"><strong>National Scholarship for Master's Students</strong></span><span class="i18n-zh-inline"><strong>硕士研究生国家奖学金</strong></span></li>
+    <li><span class="i18n-en-inline"><strong>2025 Shandong Provincial Graduate Student Innovation Achievements</strong></span><span class="i18n-zh-inline"><strong>2025年山东省研究生创新成果</strong></span></li>
+    <li><span class="i18n-en-inline"><strong>Competition awards:</strong> Huawei Cup national third prize; National AI Application Scenario Innovation Challenge first prize; Shandong University's inaugural Graduate AI Innovation Competition runner-up</span><span class="i18n-zh-inline"><strong>科创竞赛：</strong>“华为杯”中国研究生人工智能创新大赛全国三等奖、全国人工智能应用场景创新挑战赛一等奖、山东大学首届研究生人工智能创新大赛亚军</span></li>
+    <li><span class="i18n-en-inline"><strong>ICCSE 2026 Most Popular Poster Award</strong></span><span class="i18n-zh-inline"><strong>ICCSE 2026 Most Popular Poster Award</strong></span></li>
+    <li><span class="i18n-en-inline"><strong>Graduate Student Party Member Role Model program</strong>, selected and passed its midterm review (one of 10 university-wide)</span><span class="i18n-zh-inline">入选校级<strong>“研究生党员标兵”项目</strong>并通过中期检查（全校仅10人）</span></li>
+  </ul>
 </section>
 
 <section class="jing-section" id="links">
